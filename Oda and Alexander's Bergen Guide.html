@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>Bergen — A Guest Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    /* Light mode only */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #FAFAFA;
+    --bg-card: #E8EEF2;
+    --bg-card-hover: #DCE5EC;
+    --bg-hero: #1B2845;
+    --text-primary: #1A1A1A;
+    --text-secondary: #2C2C2C;
+    --text-muted: #6B6B6B;
+    --border-strong: #1A1A1A;
+    --border-soft: #B8C5D0;
+    --accent: #1B2845;
+    --accent-warm: #C5573C;
+    --accent-on-dark: #FFFFFF;
+    --hero-text: #FFFFFF;
+    --hero-text-muted: rgba(255, 255, 255, 0.65);
+    --hero-border: rgba(255, 255, 255, 0.2);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--bg-primary);
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ─────────── MASTHEAD ─────────── */
+  .masthead {
+    text-align: center;
+    padding: 80px 0 60px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    position: relative;
+    border-bottom: 1px solid var(--text-primary);
+  }
+
+  .masthead-meta {
+    display: inline-block;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: var(--accent-warm);
+    padding: 8px 20px;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+  .masthead h1 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(56px, 9vw, 120px);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+  }
+
+  .masthead-subtitle {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2.5vw, 26px);
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+
+  .masthead-mountains {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 40px auto 0;
+    color: var(--accent);
+  }
+
+  .masthead-address {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-soft);
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* ─────────── NAVIGATION ─────────── */
+  .nav {
+    background: var(--accent);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .nav button {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 400;
+    transition: opacity 0.2s;
+    position: relative;
+  }
+
+  .nav button:hover {
+    opacity: 0.7;
+  }
+
+  .nav button::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #FFFFFF;
+    transition: width 0.3s;
+  }
+
+  .nav button:hover::after {
+    width: 100%;
+  }
+
+  /* ─────────── INTRO ─────────── */
+  .intro {
+    text-align: center;
+    padding: 100px 0 60px;
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .intro::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--text-primary);
+    margin: 0 auto 40px;
+  }
+
+  .intro p {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    font-weight: 400;
+  }
+
+  .dropcap {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 78px;
+    line-height: 0.85;
+    float: left;
+    color: var(--accent-warm);
+    padding: 6px 14px 0 0;
+    margin-top: 4px;
+  }
+
+  .ornament {
+    text-align: center;
+    font-size: 24px;
+    color: var(--accent-warm);
+    margin-bottom: 32px;
+    letter-spacing: 0.5em;
+  }
+
+  /* ─────────── SECTION HEADERS ─────────── */
+  .section {
+    padding: 80px 0 100px;
+  }
+
+  .section-alt {
+    background: var(--bg-secondary);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  .section-eyebrow {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .roman {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--accent-warm);
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .section-ornament {
+    font-size: 20px;
+    color: var(--accent-warm);
+    margin: 28px auto;
+    text-align: center;
+    letter-spacing: 0.5em;
+  }
+
+  .section-title {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: clamp(48px, 7vw, 80px);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+  }
+
+  .section-dek {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--text-primary);
+    margin: 28px auto;
+  }
+
+  /* ─────────── RESTAURANT GRID ─────────── */
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 2px solid var(--text-primary);
+    border-left: 1px solid var(--text-primary);
+  }
+
+  .restaurant {
+    padding: 44px 36px;
+    border-right: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--text-primary);
+    background: var(--bg-card);
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .restaurant:hover {
+    background: var(--bg-card-hover);
+  }
+
+  .restaurant-number {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--accent-warm);
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .restaurant-name {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.05;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+  }
+
+  .restaurant-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .restaurant-price {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: var(--accent-warm);
+    padding: 4px 10px;
+    letter-spacing: 0.05em;
+  }
+
+  .restaurant-style {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--accent-warm);
+    font-weight: 500;
+  }
+
+  .restaurant-description {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+    flex-grow: 1;
+  }
+
+  .restaurant-details {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .restaurant-address {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+  }
+
+  .restaurant-phone {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  .restaurant-link {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border-bottom: 1.5px solid var(--accent-warm);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+
+  .restaurant-link:hover {
+    opacity: 0.6;
+  }
+
+  /* ─────────── INFO BLOCKS (Transport, Toilets) ─────────── */
+  .info-blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .info-block {
+    background: var(--bg-card);
+    border-top: 2px solid var(--text-primary);
+    padding: 40px 32px;
+  }
+
+  .info-block-title {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .info-block-intro {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  .info-block-sub {
+    padding: 24px 0;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  .info-block-sub h4 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .info-block-sub p {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+  }
+
+  .info-block-sub p:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-block-sub a {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border-bottom: 1.5px solid var(--accent-warm);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+    margin-top: 8px;
+  }
+
+  .info-block-sub a:hover {
+    opacity: 0.6;
+  }
+
+  .info-meta {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    background: var(--accent-warm);
+    color: #FFFFFF;
+    padding: 2px 8px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  /* ─────────── ATTRACTIONS (Things to Do — expandable) ─────────── */
+  .attractions {
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 2px solid var(--text-primary);
+  }
+
+  .attraction {
+    border-bottom: 1px solid var(--text-primary);
+    background: var(--bg-card);
+    transition: background 0.3s;
+  }
+
+  .attraction:hover {
+    background: var(--bg-card-hover);
+  }
+
+  .attraction summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 24px;
+    user-select: none;
+  }
+
+  .attraction summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .attraction-number {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--accent-warm);
+    font-weight: 600;
+  }
+
+  .attraction-name {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .attraction-tag {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    font-weight: 600;
+  }
+
+  .attraction-toggle {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 32px;
+    color: var(--accent-warm);
+    line-height: 1;
+    width: 24px;
+    text-align: center;
+    font-weight: 400;
+    transition: transform 0.3s;
+  }
+
+  .attraction[open] .attraction-toggle {
+    transform: rotate(45deg);
+  }
+
+  .attraction-content {
+    padding: 0 32px 32px;
+    border-top: 1px solid var(--border-soft);
+    padding-top: 24px;
+  }
+
+  .attraction-content p {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+  }
+
+  .attraction-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ─────────── WALKS / HIKES ─────────── */
+  .walks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-top: 2px solid var(--text-primary);
+    border-left: 1px solid var(--text-primary);
+  }
+
+  .walk {
+    padding: 44px 36px;
+    border-right: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--text-primary);
+    background: var(--bg-card);
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .walk:hover {
+    background: var(--bg-card-hover);
+  }
+
+  .walk-number {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--accent-warm);
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .walk-title {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.05;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+  }
+
+  .walk-subtitle {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .walk-description {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .walk-route h4 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .walk-route ul {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+
+  .walk-route li {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .walk-route li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--accent-warm);
+    font-size: 12px;
+  }
+
+  .walk-meta {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .walk-best {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-soft);
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--accent-warm);
+    font-weight: 500;
+  }
+
+  /* ─────────── FOOTER ─────────── */
+  .footer {
+    text-align: center;
+    padding: 60px 0 40px;
+    border-top: 1px solid var(--text-primary);
+    margin-top: 40px;
+  }
+
+  .footer-text {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--text-muted);
+  }
+
+  /* ─────────── RESPONSIVE ─────────── */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 24px;
+    }
+
+    .nav-inner {
+      padding: 0 24px;
+      gap: 20px;
+    }
+
+    .nav button {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    .masthead {
+      padding: 60px 0 30px;
+    }
+
+    .intro {
+      padding: 60px 0 30px;
+    }
+
+    .intro p {
+      font-size: 18px;
+    }
+
+    .section {
+      padding: 40px 0 60px;
+    }
+
+    .restaurant-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .restaurant {
+      padding: 32px 24px;
+    }
+
+    .restaurant-name {
+      font-size: 26px;
+    }
+
+    .info-blocks {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .walks {
+      grid-template-columns: 1fr;
+    }
+
+    .walk {
+      padding: 32px 24px;
+    }
+
+    .walk-title {
+      font-size: 28px;
+    }
+
+    .attraction summary {
+      grid-template-columns: auto 1fr auto;
+      padding: 20px 20px;
+      gap: 16px;
+    }
+
+    .attraction-tag {
+      display: none;
+    }
+
+    .attraction-name {
+      font-size: 20px;
+    }
+
+    .attraction-content {
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ═══════════════ MASTHEAD ═══════════════ -->
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead-meta">A Guest Guide</div>
+      <h1>Bergen</h1>
+      <div class="masthead-subtitle">A curated companion to our city</div>
+      <svg class="masthead-mountains" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Bryggen — the iconic Hanseatic wharf -->
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+          <!-- House 1 -->
+          <path d="M 40 150 L 40 70 L 75 35 L 110 70 L 110 150 Z"/>
+          <line x1="55" y1="90" x2="95" y2="90"/>
+          <rect x="60" y="100" width="12" height="16"/>
+          <rect x="78" y="100" width="12" height="16"/>
+          <rect x="60" y="124" width="12" height="16"/>
+          <rect x="78" y="124" width="12" height="16"/>
+
+          <!-- House 2 -->
+          <path d="M 115 150 L 115 80 L 150 45 L 185 80 L 185 150 Z"/>
+          <line x1="130" y1="95" x2="170" y2="95"/>
+          <rect x="135" y="105" width="11" height="14"/>
+          <rect x="154" y="105" width="11" height="14"/>
+          <rect x="135" y="127" width="11" height="14"/>
+          <rect x="154" y="127" width="11" height="14"/>
+
+          <!-- House 3 -->
+          <path d="M 190 150 L 190 65 L 225 30 L 260 65 L 260 150 Z"/>
+          <line x1="205" y1="85" x2="245" y2="85"/>
+          <rect x="210" y="95" width="12" height="16"/>
+          <rect x="228" y="95" width="12" height="16"/>
+          <rect x="210" y="119" width="12" height="16"/>
+          <rect x="228" y="119" width="12" height="16"/>
+
+          <!-- House 4 -->
+          <path d="M 265 150 L 265 75 L 300 40 L 335 75 L 335 150 Z"/>
+          <line x1="280" y1="92" x2="320" y2="92"/>
+          <rect x="285" y="102" width="11" height="14"/>
+          <rect x="304" y="102" width="11" height="14"/>
+          <rect x="285" y="124" width="11" height="14"/>
+          <rect x="304" y="124" width="11" height="14"/>
+
+          <!-- House 5 -->
+          <path d="M 340 150 L 340 60 L 375 25 L 410 60 L 410 150 Z"/>
+          <line x1="355" y1="80" x2="395" y2="80"/>
+          <rect x="360" y="90" width="12" height="16"/>
+          <rect x="378" y="90" width="12" height="16"/>
+          <rect x="360" y="115" width="12" height="16"/>
+          <rect x="378" y="115" width="12" height="16"/>
+
+          <!-- House 6 -->
+          <path d="M 415 150 L 415 80 L 450 45 L 485 80 L 485 150 Z"/>
+          <line x1="430" y1="95" x2="470" y2="95"/>
+          <rect x="435" y="105" width="11" height="14"/>
+          <rect x="454" y="105" width="11" height="14"/>
+          <rect x="435" y="127" width="11" height="14"/>
+          <rect x="454" y="127" width="11" height="14"/>
+
+          <!-- House 7 -->
+          <path d="M 490 150 L 490 70 L 525 35 L 560 70 L 560 150 Z"/>
+          <line x1="505" y1="88" x2="545" y2="88"/>
+          <rect x="510" y="98" width="12" height="16"/>
+          <rect x="528" y="98" width="12" height="16"/>
+          <rect x="510" y="122" width="12" height="16"/>
+          <rect x="528" y="122" width="12" height="16"/>
+
+          <!-- House 8 -->
+          <path d="M 565 150 L 565 78 L 600 43 L 635 78 L 635 150 Z"/>
+          <line x1="580" y1="95" x2="620" y2="95"/>
+          <rect x="585" y="105" width="11" height="14"/>
+          <rect x="604" y="105" width="11" height="14"/>
+          <rect x="585" y="127" width="11" height="14"/>
+          <rect x="604" y="127" width="11" height="14"/>
+
+          <!-- House 9 -->
+          <path d="M 640 150 L 640 65 L 675 30 L 710 65 L 710 150 Z"/>
+          <line x1="655" y1="85" x2="695" y2="85"/>
+          <rect x="660" y="95" width="12" height="16"/>
+          <rect x="678" y="95" width="12" height="16"/>
+          <rect x="660" y="119" width="12" height="16"/>
+          <rect x="678" y="119" width="12" height="16"/>
+
+          <!-- House 10 -->
+          <path d="M 715 150 L 715 75 L 750 40 L 785 75 L 785 150 Z"/>
+          <line x1="730" y1="92" x2="770" y2="92"/>
+          <rect x="735" y="102" width="11" height="14"/>
+          <rect x="754" y="102" width="11" height="14"/>
+          <rect x="735" y="124" width="11" height="14"/>
+          <rect x="754" y="124" width="11" height="14"/>
+
+          <!-- Ground line / water -->
+          <line x1="0" y1="150" x2="800" y2="150" stroke-width="1.5"/>
+          <path d="M 0 156 Q 40 154 80 156 T 160 156 T 240 156 T 320 156 T 400 156 T 480 156 T 560 156 T 640 156 T 720 156 T 800 156" opacity="0.5"/>
+        </g>
+      </svg>
+      <div class="masthead-address">Sophus Pihls Gate 11 · Sandviken</div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <button type="button" data-target="restaurants">Restaurants</button>
+      <button type="button" data-target="bars">Bars</button>
+      <button type="button" data-target="bakeries">Bakeries</button>
+      <button type="button" data-target="transport">Transport</button>
+      <button type="button" data-target="things-to-do">Things to Do</button>
+      <button type="button" data-target="walks">Walks</button>
+      <button type="button" data-target="hikes">Hikes</button>
+      <button type="button" data-target="toilets">Toilets</button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ INTRO ═══════════════ -->
+  <section class="intro">
+    <div class="container">
+      <div class="ornament">❋</div>
+      <p><span class="dropcap">W</span>elcome to Bergen — a city of seven mountains, salt air, and quiet wooden streets. We have gathered here the places we love most, so you might love them too.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ RESTAURANTS ═══════════════ -->
+  <section class="section" id="restaurants">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">I</span> · Chapter One</div>
+        <h2 class="section-title">Restaurants</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">A selection of dining rooms, neighbourhood favourites, and special-occasion tables — chosen by us, for you.</p>
+      </div>
+
+      <div class="restaurant-grid">
+
+        <!-- 01 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 01</div>
+          <h3 class="restaurant-name">Basso Social</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€€</span>
+            <span class="restaurant-style">Smart casual</span>
+          </div>
+          <p class="restaurant-description">Italian-Nordic fusion served as a social, shared menu of 7 to 13 courses. The basement setting feels intimate and convivial. Look out for their Sunday offer.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Strandgaten 53, 5004 Bergen</div>
+            <div class="restaurant-phone">+47 75 80 32 12</div>
+            <a href="https://diningsix.no/basso-social" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 02</div>
+          <h3 class="restaurant-name">Tempo Tempo</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€</span>
+            <span class="restaurant-style">Casual</span>
+          </div>
+          <p class="restaurant-description">Natural wines, small sharing plates, and excellent pizza in a cozy retro space. The tasting menu — available until 21:00 — is highly recommended.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Domkirkegaten 6A, 5017 Bergen</div>
+            <div class="restaurant-phone">+47 93 45 53 37</div>
+            <a href="https://tempotempo.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 03</div>
+          <h3 class="restaurant-name">Sushi Roll Sandviken</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€</span>
+            <span class="restaurant-style">Casual</span>
+          </div>
+          <p class="restaurant-description">A short walk from the apartment. Quality Japanese sushi in a relaxed neighbourhood setting — a quiet local favourite.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Stølegaten 12B, 5003 Bergen</div>
+            <div class="restaurant-phone">+47 41 33 45 41</div>
+            <a href="https://sushirollsandviken.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 04</div>
+          <h3 class="restaurant-name">Dr. Wiesener</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€</span>
+            <span class="restaurant-style">Very casual</span>
+          </div>
+          <p class="restaurant-description">Our nearest neighbourhood pub. Norwegian classics, good beers, and lovely outdoor seating when the weather allows. Walk over in five minutes.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Nye Sandviksveien 17A, 5003 Bergen</div>
+            <div class="restaurant-phone">+47 98 12 77 32</div>
+            <a href="https://drwiesener.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 05</div>
+          <h3 class="restaurant-name">Engen Steakhouse</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€€–€€€€</span>
+            <span class="restaurant-style">Smart formal</span>
+          </div>
+          <p class="restaurant-description">Premium cuts of beef cooked on an open charcoal grill, served in a beautiful dining room. Classic steakhouse sides — bone marrow, béarnaise, hand-cut fries. Thursdays feature a special Tomahawk steak offer.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Engen 30, 5011 Bergen</div>
+            <div class="restaurant-phone">+47 55 90 05 55</div>
+            <a href="https://engenrestaurant.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 06</div>
+          <h3 class="restaurant-name">Cornelius Sjørestaurant</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€€€</span>
+            <span class="restaurant-style">Fine dining</span>
+          </div>
+          <p class="restaurant-description">A 5-course seafood menu served on the island of Holmen, with the catch of the day shaping the menu. Fresh fish, shellfish, and local seaweed. The 25-minute boat ride from Bryggen is included with your booking. Reserve well in advance.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Holmen Island · Boat from Dreggekaien, shed 8</div>
+            <div class="restaurant-phone">Booking essential</div>
+            <a href="https://corneliusrestaurant.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 07 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 07</div>
+          <h3 class="restaurant-name">Banzha</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€–€€€</span>
+            <span class="restaurant-style">Casual–smart</span>
+          </div>
+          <p class="restaurant-description">Cuisine from the Yunnan province of China, served as shared plates: hand-pulled noodles, spicy stir-fries, and fragrant herbs. Bold flavours and a refined kitchen — well worth booking ahead.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Neumannsgate 28, 5015 Bergen</div>
+            <div class="restaurant-phone">+47 45 72 91 62</div>
+            <a href="https://banzha.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 08 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 08</div>
+          <h3 class="restaurant-name">Trattoria del Napoli</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€</span>
+            <span class="restaurant-style">Casual</span>
+          </div>
+          <p class="restaurant-description">Wood-fired Neapolitan pizza, recently expanded into a bigger room. Booking recommended — it fills up fast.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Nøstegaten 51, 5010 Bergen</div>
+            <div class="restaurant-phone">+47 92 14 19 44</div>
+            <a href="https://getfood.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 09 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 09</div>
+          <h3 class="restaurant-name">Fløirestauranten</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€–€€€</span>
+            <span class="restaurant-style">Casual to formal</span>
+          </div>
+          <p class="restaurant-description">At the top of Mount Fløyen, reached by the funicular. Three rooms to choose from: Brasseriet, fine-dining Schou, and the cozy Peisestuen lounge. The view is everything.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Fløyfjellet 2, 5014 Bergen</div>
+            <div class="restaurant-phone">+47 48 13 27 28</div>
+            <a href="https://floirestauranten.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 10</div>
+          <h3 class="restaurant-name">Marg og Bein</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-price">€€–€€€</span>
+            <span class="restaurant-style">Casual–smart</span>
+          </div>
+          <p class="restaurant-description">Modern Norwegian cooking that uses the whole animal — from rich slow-cooked cuts to delicate offal dishes. Local ingredients, natural wines, and small sharing plates. Booking essential.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Fosswinckels Gate 18, 5007 Bergen</div>
+            <div class="restaurant-phone">+47 94 98 74 28</div>
+            <a href="https://marg-bein.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ BARS ═══════════════ -->
+  <section class="section" id="bars">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">II</span> · Chapter Two</div>
+        <h2 class="section-title">Bars</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">For a glass of natural wine, a serious cocktail, or simply somewhere quiet to end the evening.</p>
+      </div>
+
+      <div class="restaurant-grid">
+
+        <!-- 01 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 01</div>
+          <h3 class="restaurant-name">Falske Reker</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Wine bar · Sandviken</span>
+          </div>
+          <p class="restaurant-description">A short walk from the apartment. Natural wines, sour beers, and small dishes built around tinned sardines. Run by two local teachers — warm, personal, and very Sandviken.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Nye Sandviksveien 73D, 5032 Bergen</div>
+            <div class="restaurant-phone">Wed–Thu 16–23 · Fri 15–23 · Sat–Sun 12–23</div>
+            <a href="https://falskereker.mmm.page/1/" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 02</div>
+          <h3 class="restaurant-name">Vinyl</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Cocktails · Music</span>
+          </div>
+          <p class="restaurant-description">35+ beers on tap, well-made cocktails, and vinyl records spinning all night. Cozy, relaxed, and a favourite among locals — the full name is "Vinyl - Plater & Øl" (Records & Beer).</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Kong Oscars Gate 8, 5017 Bergen</div>
+            <div class="restaurant-phone">Open most evenings</div>
+            <a href="https://vinylbar.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 03</div>
+          <h3 class="restaurant-name">Tempo Tempo</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Wine bar · Small plates</span>
+          </div>
+          <p class="restaurant-description">Also listed in the restaurant chapter — but worth knowing as a bar too. Natural wines, small sharing plates, and pizza in a cozy retro space.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Domkirkegaten 6A, 5017 Bergen</div>
+            <div class="restaurant-phone">+47 93 45 53 37</div>
+            <a href="https://tempotempo.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 04</div>
+          <h3 class="restaurant-name">No Stress</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Cocktails · Playful</span>
+          </div>
+          <p class="restaurant-description">Creative cocktails made with homemade syrups by friendly, talented staff. Fun, slightly playful atmosphere — there is even a Nintendo 64. Often listed among Norway's best bars.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Hollendergaten 11, 5017 Bergen</div>
+            <div class="restaurant-phone">Open most evenings</div>
+            <a href="https://nostress.bar" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ BAKERIES ═══════════════ -->
+  <section class="section" id="bakeries">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">III</span> · Chapter Three</div>
+        <h2 class="section-title">Bakeries</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">For morning pastries, fresh bread, and a proper cup of coffee — the daily rituals of Bergen.</p>
+      </div>
+
+      <div class="restaurant-grid">
+
+        <!-- 01 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 01</div>
+          <h3 class="restaurant-name">Bakeri 29</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Neighbourhood bakery · Skuteviken</span>
+          </div>
+          <p class="restaurant-description">A small neighbourhood bakery in Skuteviken, a short walk from the apartment. Fresh bread, pastries, and coffee — perfect for a relaxed morning.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Skuteviksveien 29, 5032 Bergen</div>
+            <div class="restaurant-phone">Follow on Instagram: @bakeri_29</div>
+            <a href="https://www.instagram.com/bakeri_29/" class="restaurant-link" target="_blank">Visit Instagram →</a>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 02</div>
+          <h3 class="restaurant-name">Kardemomme i Marken</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Bakery & café · Marken</span>
+          </div>
+          <p class="restaurant-description">A new bakery (opened summer 2025) on the charming pedestrian street Marken, near the railway station. Fresh pastries, croissants, and good coffee in a lovely setting.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Marken 31, 5017 Bergen</div>
+            <div class="restaurant-phone">Follow on Instagram: @kardemommeimarken</div>
+            <a href="https://www.instagram.com/kardemommeimarken/" class="restaurant-link" target="_blank">Visit Instagram →</a>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 03</div>
+          <h3 class="restaurant-name">Godt Brød</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Organic bakery · Several locations</span>
+          </div>
+          <p class="restaurant-description">An organic bakery chain since 1995, with several locations around the city. Fresh bread, skillingsbolle (Bergen's cinnamon bun), sandwiches, and coffee. Build your own sandwich at the counter.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Vestre Torggaten 2 · Marken · Nedre Korskirkeallmenningen 12 · Vetrlidsallmenningen 19</div>
+            <div class="restaurant-phone">Open daily</div>
+            <a href="https://godtbrod.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 04</div>
+          <h3 class="restaurant-name">Omni Kaiser Patisserie</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">French patisserie</span>
+          </div>
+          <p class="restaurant-description">Authentic French pastry — proper croissants, croughnuts, and butter-laden viennoiseries. A small place but exceptionally good.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Olav Kyrres Gate 31, 5014 Bergen</div>
+            <div class="restaurant-phone">Follow on Instagram: @omnikaiserpatisserie_no</div>
+            <a href="https://www.instagram.com/omnikaiserpatisserie_no/" class="restaurant-link" target="_blank">Visit Instagram →</a>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="restaurant">
+          <div class="restaurant-number">No. 05</div>
+          <h3 class="restaurant-name">Bit Union</h3>
+          <div class="restaurant-meta">
+            <span class="restaurant-style">Bakery café · Galleriet</span>
+          </div>
+          <p class="restaurant-description">Good buns in many flavours — pistachio, cardamom — and decent coffee. The shopping mall setting is less charming, so we recommend taking your pastry to go.</p>
+          <div class="restaurant-details">
+            <div class="restaurant-address">Galleriet, Torgallmenningen 8, 5014 Bergen</div>
+            <div class="restaurant-phone">Open mall hours</div>
+            <a href="https://bit.no" class="restaurant-link" target="_blank">Visit website →</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ TRANSPORT ═══════════════ -->
+  <section class="section" id="transport">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">IV</span> · Chapter Four</div>
+        <h2 class="section-title">Transport</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">How to get to the apartment from the airport — and how to move around Bergen once you're here.</p>
+      </div>
+
+      <div class="info-blocks">
+
+        <div class="info-block">
+          <h3 class="info-block-title">From the Airport</h3>
+          <p class="info-block-intro">Flesland Airport (BGO) is about 20 km south of the city.</p>
+
+          <div class="info-block-sub">
+            <h4>Public Transport</h4>
+            <p>Take Bybanen (the Bergen city rail) to <em>Byparken</em> (about 50 minutes). From Festplassen N — right across from Byparken — change to bus line 10 towards Mulen and get off at <em>Øvre Sandviksvei</em>, then a short walk to the apartment.</p>
+            <p class="info-meta"><strong>Cost:</strong> 51 NOK · Buy tickets in the Skyss app</p>
+          </div>
+
+          <div class="info-block-sub">
+            <h4>Taxi or Uber</h4>
+            <p>A direct ride from the airport to the apartment, with fixed taxi prices.</p>
+            <p class="info-meta"><strong>Travel time:</strong> 20–30 minutes (depending on traffic)<br><strong>Daytime (06–18):</strong> approx. 490 NOK + fees<br><strong>Evenings, nights & weekends:</strong> approx. 540 NOK + fees</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <h3 class="info-block-title">Getting Around Bergen</h3>
+          <p class="info-block-intro">Bergen is compact and walkable — but the bus is your best friend for longer distances.</p>
+
+          <div class="info-block-sub">
+            <h4>Public Transport</h4>
+            <p>Download the <strong>Skyss</strong> app — buy tickets and plan journeys in one place. Line 10 stops about 3 minutes from the apartment and runs frequently to the city centre.</p>
+            <p class="info-meta"><strong>Single ticket:</strong> 51 NOK</p>
+            <p>We generally do not recommend taxi or Uber from the apartment to the city centre — the bus runs often and is just as fast.</p>
+          </div>
+
+          <div class="info-block-sub">
+            <h4>Other Ways to Get Around</h4>
+            <p><strong>Walking:</strong> Bergen is small and very walkable.<br>
+            <strong>Cycling & electric scooters:</strong> Available for rent around the city.</p>
+          </div>
+
+          <div class="info-block-sub">
+            <h4>Parking</h4>
+            <p>Street parking is available outside the apartment. Use the <strong>EasyPark</strong> app to pay.</p>
+            <p class="info-meta"><strong>Paid hours:</strong> Mon–Sat 08:00–23:00 · Sundays and holidays free</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ THINGS TO DO ═══════════════ -->
+  <section class="section" id="things-to-do">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">V</span> · Chapter Five</div>
+        <h2 class="section-title">Things to Do</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">Cultural landmarks, museums, and historic places — the essential Bergen experiences. Tap each card to read more.</p>
+      </div>
+
+      <div class="attractions">
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">01</span>
+            <span class="attraction-name">Bryggen</span>
+            <span class="attraction-tag">UNESCO World Heritage</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>The historic Hanseatic wharf of Bergen, dating back to the 14th century. Walk through narrow wooden alleyways between the iconic colourful buildings, browse small artisan shops, and feel the layers of history. The whole area is a UNESCO World Heritage Site.</p>
+            <p class="info-meta"><strong>Best time:</strong> Early morning or late afternoon to avoid the cruise ship crowds.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">02</span>
+            <span class="attraction-name">Fisketorget — The Fish Market</span>
+            <span class="attraction-tag">Food market</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>Bergen's open-air and indoor fish market, where you can taste fresh seafood, smoked salmon, and local specialities. Touristy but lively, and a good place to grab lunch with a view of the harbour.</p>
+            <p class="info-meta"><strong>Note:</strong> Prices can be high — best for tasting, not large meals.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">03</span>
+            <span class="attraction-name">Mount Ulriken</span>
+            <span class="attraction-tag">Cable car · Highest peak</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>The highest of Bergen's seven mountains. From the top you have miles of views over the sea, fjords, and mountains. Take the Ulriken Cable Car up for an easy visit — or hike up the 1,333 Sherpa steps if you want a challenge. See the Hikes chapter for more.</p>
+            <p class="info-meta"><strong>Access:</strong> Ulriken Express Bus from the Fish Market (April 1 – September 30, about 15 minutes), or take Bybanen (the light rail) line 2 from Byparken to Haukeland.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">04</span>
+            <span class="attraction-name">Mount Fløyen</span>
+            <span class="attraction-tag">Funicular · Views</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>The most accessible of Bergen's mountains, with the famous Fløibanen funicular taking you to the top in minutes. Once there: walking trails, a playground, a troll forest for kids, and excellent views over the city. Café at the top.</p>
+            <p class="info-meta"><strong>Tip:</strong> You can also walk down (or up) in about 45–60 minutes.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">05</span>
+            <span class="attraction-name">Gamle Bergen</span>
+            <span class="attraction-tag">Open-air museum</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>An open-air museum of about 50 wooden houses from the 18th and 19th centuries, preserved as a small "old Bergen" village. Easy walking distance from the apartment in Sandviken, and a wonderful glimpse of life in old Bergen.</p>
+            <p class="info-meta"><strong>Best time:</strong> May to September.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">06</span>
+            <span class="attraction-name">KODE Art Museums</span>
+            <span class="attraction-tag">Art · Four buildings</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>One of the largest art museums in the Nordic countries, spread across four buildings around Lille Lungegårdsvann lake. Strong collection of Edvard Munch, J.C. Dahl, and contemporary art. Easy to spend half a day here.</p>
+            <p class="info-meta"><strong>Tip:</strong> One ticket gives access to all four KODE buildings.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">07</span>
+            <span class="attraction-name">Bergenhus Fortress</span>
+            <span class="attraction-tag">Medieval · Free entry</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>One of Norway's oldest and best-preserved stone fortresses, dating from the 1240s. Walk around the grounds for free, or visit Håkon's Hall and the Rosenkrantz Tower for a deeper look into medieval Bergen.</p>
+            <p class="info-meta"><strong>Location:</strong> Right next to Bryggen — easy to combine.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">08</span>
+            <span class="attraction-name">The Hanseatic Museum & Schøtstuene</span>
+            <span class="attraction-tag">History · Bryggen</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>A small but fascinating museum about the Hanseatic League and the German merchants who ran Bryggen for centuries. Schøtstuene, the assembly rooms, are nearby and included with your ticket.</p>
+            <p class="info-meta"><strong>Note:</strong> Check opening hours — sometimes closed for renovations.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">09</span>
+            <span class="attraction-name">Edvard Grieg Museum — Troldhaugen</span>
+            <span class="attraction-tag">Music · Composer's home</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>The home of Norway's most famous composer, Edvard Grieg, just outside the city. Visit his villa, the small composer's hut by the lake, and the modern concert hall where lunchtime concerts are held in summer.</p>
+            <p class="info-meta"><strong>Access:</strong> Light rail (Bybanen) to Hop, then a 20-minute walk or short taxi.</p>
+          </div>
+        </details>
+
+        <details class="attraction">
+          <summary>
+            <span class="attraction-number">10</span>
+            <span class="attraction-name">St. Mary's Church</span>
+            <span class="attraction-tag">Bergen's oldest building</span>
+            <span class="attraction-toggle">+</span>
+          </summary>
+          <div class="attraction-content">
+            <p>The oldest building still in use in Bergen, built around 1150. A Romanesque-Gothic stone church with a beautifully carved Baroque pulpit. Right next to Bryggen — small but worth the visit.</p>
+            <p class="info-meta"><strong>Tip:</strong> Combine with Bryggen and the fortress for an easy half-day.</p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ WALKS ═══════════════ -->
+  <section class="section" id="walks">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">VI</span> · Chapter Six</div>
+        <h2 class="section-title">Walks</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">Slow strolls through the neighbourhoods we love most.</p>
+      </div>
+
+      <div class="walks">
+
+        <article class="walk">
+          <div class="walk-number">Walk 01</div>
+          <h3 class="walk-title">Sandviken</h3>
+          <p class="walk-subtitle">Charming coastal village</p>
+          <p class="walk-description">A historic fishing village with many 18th century wooden houses — very charming and very 'Bergen'.</p>
+          <div class="walk-route">
+            <h4>Route highlights</h4>
+            <ul>
+              <li>Start from the apartment</li>
+              <li>Wander through old cobblestone streets and white wooden houses</li>
+              <li>Stop for coffee or a drink at <strong>Falske Reker</strong></li>
+              <li>Pick up fresh pastries at <strong>Bakeri 29</strong></li>
+              <li>Walk along the waterfront and enjoy the fjord views</li>
+            </ul>
+          </div>
+          <p class="walk-best">Best for — Photography, peaceful exploration, local atmosphere</p>
+        </article>
+
+        <article class="walk">
+          <div class="walk-number">Walk 02</div>
+          <h3 class="walk-title">Nordnes</h3>
+          <p class="walk-subtitle">Historic peninsula with local character</p>
+          <p class="walk-description">A picturesque area that juts out into the fjord. Today it is a sought-after residential neighbourhood with families, schools, and leafy parks — feeling more like a small town than an inner-city suburb.</p>
+          <div class="walk-route">
+            <h4>Route highlights</h4>
+            <ul>
+              <li>Explore narrow alleyways only locals know about</li>
+              <li>Stop at <strong>Løvetann Kafé & Bistro</strong> for coffee and organic, vegetarian food</li>
+              <li>Visit <strong>Nordnesparken</strong> for fjord views and the totem pole (a gift from Seattle)</li>
+            </ul>
+          </div>
+          <p class="walk-best">Best for — History, local vibes, quiet neighbourhoods away from Bryggen</p>
+        </article>
+
+        <article class="walk">
+          <div class="walk-number">Walk 03</div>
+          <h3 class="walk-title">University Area & Botanical Gardens</h3>
+          <p class="walk-subtitle">Peaceful heights</p>
+          <p class="walk-description">Ascend to Bergen's academic quarter and the botanical garden — a calm, green walk on the city's hill.</p>
+          <div class="walk-route">
+            <h4>Route highlights</h4>
+            <ul>
+              <li>Walk up to the <strong>Botanical Garden (Muséhagen)</strong>, located just outside the university area</li>
+              <li>Explore the different garden areas — rare trees, mountain plants, and seasonal flowers</li>
+              <li>Pick up coffee at <strong>Godt Brød</strong></li>
+              <li>Stroll through <strong>Nygårdsparken</strong>, the largest park in Bergen — with the iconic duck pond and winding paths under mature trees</li>
+            </ul>
+          </div>
+          <p class="walk-best">Best for — Nature lovers, peaceful walks, families with children</p>
+        </article>
+
+        <article class="walk">
+          <div class="walk-number">Walk 04</div>
+          <h3 class="walk-title">Fjellveien</h3>
+          <p class="walk-subtitle">Flat ridge walk with city views</p>
+          <p class="walk-description">One of the most famous walking routes in Bergen — and the flattest. You get a lovely view of the Bergen mountains, forests, historic buildings, fjord, and cityscape.</p>
+          <div class="walk-route">
+            <h4>What to know</h4>
+            <ul>
+              <li>The 4.6 km path offers panoramic views over Bergen</li>
+              <li>Mostly a pretty path through the woods, with regular city views</li>
+              <li>Popular with all ages — joggers, couples, and families with prams</li>
+              <li>You can walk the full path, or do a section and return to the centre</li>
+            </ul>
+          </div>
+          <p class="walk-best">Best for — All ages and fitness levels, views without steep climbs, peaceful forest walks</p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ HIKES ═══════════════ -->
+  <section class="section" id="hikes">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">VII</span> · Chapter Seven</div>
+        <h2 class="section-title">Hikes</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">Bergen sits between seven mountains — go and meet them.</p>
+      </div>
+
+      <div class="walks">
+
+        <article class="walk">
+          <div class="walk-number">Hike 01</div>
+          <h3 class="walk-title">Mount Fløyen</h3>
+          <p class="walk-subtitle">Easy & scenic</p>
+          <p class="walk-description">One of the seven mountains surrounding Bergen. The funicular takes you to a beautiful area with many walking and hiking options.</p>
+          <div class="walk-route">
+            <h4>Route options</h4>
+            <ul>
+              <li><strong>Easy:</strong> Take the <em>Fløibanen</em> funicular from the city centre right to the top and enjoy the views. There is a charming café (Fløistuen) for fresh pastries.</li>
+              <li><strong>Moderate:</strong> Walk up to Fløyen (45 minutes to 1 hour depending on your pace).</li>
+              <li><strong>Playground:</strong> For kids, there is a large playground and the mysterious troll forest.</li>
+            </ul>
+          </div>
+          <p class="walk-best">Best for — Families, easy walks, city views</p>
+        </article>
+
+        <article class="walk">
+          <div class="walk-number">Hike 02</div>
+          <h3 class="walk-title">Stoltzekleiven</h3>
+          <p class="walk-subtitle">Short & steep</p>
+          <p class="walk-description">A steep paved trail and stairway with approximately 908 steps up to Sandviksfjellet — one of the most popular trails in Bergen.</p>
+          <div class="walk-route">
+            <h4>What to know</h4>
+            <ul>
+              <li>About 315 metres of elevation gain</li>
+              <li>Not an easy hike if you're not used to climbing</li>
+              <li>As you gain altitude, the views get better</li>
+              <li>From the top — beautiful views over Sandviken and Byfjorden</li>
+              <li>You can continue from the top all the way to Mount Fløyen</li>
+            </ul>
+          </div>
+          <p class="walk-best">Best for — Fitness enthusiasts, a quick challenge, Sandviken views</p>
+        </article>
+
+        <article class="walk">
+          <div class="walk-number">Hike 03</div>
+          <h3 class="walk-title">Mount Ulriken</h3>
+          <p class="walk-subtitle">Highest peak</p>
+          <p class="walk-description">The highest of Bergen's seven mountains. From the top you have miles of views over the sea, fjords, and mountains.</p>
+          <div class="walk-route">
+            <h4>Route options</h4>
+            <ul>
+              <li><strong>Easy:</strong> Take the Ulriken Cable Car to the top. There is a restaurant, café, and shop.</li>
+              <li><strong>Active:</strong> Hike up the Sherpa steps (1,333 steps). Allow 60–90 minutes.</li>
+            </ul>
+          </div>
+          <p class="walk-meta"><strong>Access:</strong> Ulriken Express Bus from the Fish Market (April 1 – September 30, about 15 minutes), or take Bybanen (the light rail) line 2 from Byparken to Haukeland.</p>
+          <p class="walk-best">Best for — All fitness levels (via cable car), scenic views, shorter hikes</p>
+        </article>
+
+        <article class="walk">
+          <div class="walk-number">Hike 04</div>
+          <h3 class="walk-title">Vidden</h3>
+          <p class="walk-subtitle">The mountain plateau</p>
+          <p class="walk-description">One of the most popular hikes in Bergen, with beautiful views across the city and region. Between Mount Ulriken and Mount Fløyen you can see the fjords and islands around Bergen. On a clear day you can even see the Folgefonna glacier.</p>
+          <div class="walk-route">
+            <h4>What you need to know</h4>
+            <ul>
+              <li>About 18 km from Ulriken to Fløyen — takes 5–6 hours</li>
+              <li>Start and end with the Ulriken Cable Car and Fløibanen funicular</li>
+              <li>Well-marked trail with stunning high-mountain terrain</li>
+            </ul>
+          </div>
+          <p class="walk-best">Best for — Full-day hikers, experienced hikers, those wanting Bergen's best views</p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ TOILETS ═══════════════ -->
+  <section class="section" id="toilets">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-eyebrow"><span class="roman">VIII</span> · Chapter Eight</div>
+        <h2 class="section-title">Public Toilets</h2>
+        <div class="section-ornament">❋</div>
+        <p class="section-dek">When you need them — and you will. Bergen's central public toilets.</p>
+      </div>
+
+      <div class="info-blocks">
+
+        <div class="info-block">
+          <h3 class="info-block-title">Where to find them</h3>
+          <p class="info-block-intro">Bergen has an interactive toilet map showing public restrooms across the city centre — including municipally owned toilets and facilities in shopping centres and transport hubs.</p>
+
+          <div class="info-block-sub">
+            <h4>Key locations</h4>
+            <p><strong>Skur 8 on Bryggen (Dreggekaien)</strong> — Open daily 08:00–23:00<br>
+            <strong>Strandkai Terminal</strong> — Open daily 07:00–23:00<br>
+            <strong>Nygårdsparken (Gartnerboligen)</strong> — Thormøhlens Gate 40, near the park</p>
+          </div>
+
+          <div class="info-block-sub">
+            <h4>The full map</h4>
+            <p>Open Bergen's interactive toilet map to find the nearest one with opening hours and accessibility information.</p>
+            <a href="https://www.google.com/maps/d/viewer?hl=no&mid=1_7EnYjTqgSpg1vdDqjfyXsKMd3JHOcob&ll=60.39199544006504%2C5.336173383932197&z=15" class="restaurant-link" target="_blank">Open toilet map →</a>
+          </div>
+
+          <div class="info-block-sub">
+            <h4>Good to know</h4>
+            <p>Some locations charge a small fee — mainly shopping centres and transport terminals. Most accept card payment.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">A welcome from your hosts — enjoy Bergen.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Handle internal section navigation without triggering "Open Link" dialog on mobile
+    document.querySelectorAll('.nav button[data-target]').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        if (target) {
+          const navHeight = document.querySelector('.nav').offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
